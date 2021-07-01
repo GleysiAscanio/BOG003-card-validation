@@ -47,7 +47,7 @@ p2{
 
 /*Estilos generales de las tarjetas*/
 .tarjeta {
-    width: 100%;
+    width: 40%;
     max-width: 550px;
     position: relative;
     color: #fff;
@@ -60,6 +60,7 @@ p2{
     background: none;
     display: flex;
     align-content: space-between;
+    margin-right: 20px;
 }
 
 .tarjeta .active {
