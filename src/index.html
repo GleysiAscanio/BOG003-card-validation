@@ -3,11 +3,72 @@
   <head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Rock+Salt:400'/>
+    <link href = " https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap "/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>Agencia de Viajes</header>
+    <main>
+      <!--Inicio de Pagina-->
+      <p1>Para reservar su Viaje, por favor ingrese el numero de su tarjeta TRAVEL GOLD, siga los pasos:</p1>
+      </br></br></br></br>
+      <p2>1.Ingrese el número de su tarjeta TRAVEL GOLD.</p2><br>
+      <p2>2.Ingrese su nombre, tal cual esta en su tarjeta.</p2><br>
+      <p2>3.La fecha de vencimiento y su CVV.</p2><br> 
+      <p2>4.Haga Clic en el boton Validar.</p2><br>
+      <p2>5.Espere el mensaje de confirmación, si su tarjeta es valida, seleccione su Destino VIP.</p2>
+        </br></br></br>
+
+         <div class="contenedor">
+
+                           <!--Tarjeta parte delantera-->
+            <section class="tarjeta" id="tarjeta">
+                <div class="delantera">
+                    <div class="logo-marca" id="logoMarca">
+                        <img src="../imagenes/mastercard.png" alt=""/> 
+                    </div>
+                    <img src="../imagenes/chip-tarjeta.png" class="chip" alt=""/>
+                    <div class="datos">
+                    <div class="grupo" id="numero">
+                    <p class="label">Número Tarjeta</p>
+                    <p class="numero">#### #### #### ###</p>
+                    </div>
+                    <div class="flexbox">
+                    <div class="grupo" id="nombre">
+                        <p class="label">Nombre Tarjeta</p>
+                        <p class="nombre">DANIEL TORRES</p>
+                    </div>
+  
+                    <div class="grupo" id="expiracion">
+                        <p class="label">Expiración</p>
+                        <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                    </div>
+                     </div>
+                  </div>
+               </div>
+                            <!--Tarjeta parte trasera--> 
+                    <div class="trasera">
+                        <div class="barra-magnetica"></div>
+                           <div class="datos">
+                              <div class="grupo" id="firma">
+                                <p class="label">Firma</p>
+                                 <div class="firma"><p></p></div>
+                              </div>
+                                    <div class="grupo" id="ccv">
+                                    <p class="label">CCV</p>
+                                     <P class="ccv"></P>
+                                    </div>
+                           </div>
+                              <p class="leyenda">This card is not valid. Is a prototype created by the duo 23 of
+                               BO003, credit card project. No one is licensed, use is free. We don't have 
+                               customer service but if you want more information, please visit our project at: 
+                              </p>
+                              <a href="#" class="link-viajaja">https://github.com/Laboratoria?q=BOG003&type=&language=&sort=.</a>
+                     </div>    
+            </section>
+        </div>
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
