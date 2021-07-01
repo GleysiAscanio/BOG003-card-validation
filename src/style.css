@@ -58,6 +58,8 @@ p2{
     cursor: pointer;
     z-index: 2;
     background: none;
+    display: flex;
+    align-content: space-between;
 }
 
 .tarjeta .active {
