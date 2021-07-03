@@ -1,17 +1,18 @@
-body{
-    margin: 0;
-    padding: 0;
-    background: url(../img/playa.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-}
 header{
     font-family: "Rock Salt", sans-serif;
     font-size: 60px;
     text-align: left;
     margin: 30px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../imagenes/playa.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 p1{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
@@ -20,13 +21,14 @@ p1{
     text-align: center;
     margin: 70px;
 }
+
 p2{
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     justify-content: center;
     margin: 150px;
-    padding: 8em;
+    padding: 5em;
 }
 
 * {
@@ -42,30 +44,25 @@ p2{
     margin: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items:center
 }
 
-/*Estilos generales de las tarjetas*/
+/*-----Estilos generales de las tarjetas----*/
 .tarjeta {
-    width: 40%;
-    max-width: 550px;
+    width: 200%;
+    max-width: 1000px;
     position: relative;
     color: #fff;
-    transition: .03s ease all;
-    transform: rotateY(0deg);
+    transition: .3s ease all;
     transform-style: preserve-3d;
     backface-visibility: hidden;
-    cursor: pointer;
     z-index: 2;
     background: none;
     display: flex;
     align-content: space-between;
-    margin-right: 20px;
+       
 }
 
-.tarjeta .active {
-    transform: rotateY(180deg);
-}
 
 .tarjeta > div {
 	padding: 30px;
@@ -77,9 +74,11 @@ p2{
 	box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
 }
 
+        /*-----Tarjeta Delantera----*/
+
 .tarjeta .delantera {
-    width: 100%;
-    background-image: url(../img/Fonfo.JPG);
+    width: 50%;
+    background-image: url(../imagenes/Fondo);
     float: left;
     background-size: cover;
 }
@@ -122,15 +121,15 @@ p2{
     margin-top: 20px;
 }
 
-/*Tarjeta Trasera*/
+            /*-----Tarjeta Trasera-----*/
 .trasera {
-    background: url(../img/trasera.PNG);
+    width: 50%;
+    background: url(../imagenes/trasera.PNG);
     background-size: cover;
-	position:relative;
+	position: relative;
     float: right;
-	top: 0;
-	transform: rotateY(0deg);
 	backface-visibility: hidden;
+    
 }
 
 .trasera .barra-magnetica {
@@ -192,31 +191,12 @@ p2{
     color: #fff;
 }
 
-/*contenedor Boton*/
-.contenedor-btn .btn-abrir-formulario {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    line-height: 20px;
-    background: #2364d2;
-    color: #fff;
-    position: relative;
-    top: -25px;
-    z-index: 3;
-    border-radius: 100%;
-    box-shadow: -5px 4px 8px rgba(24,56,182,0.4);
-    padding: 5px;
-    transition: all .2s ease;
-    border: none;
-    cursor: pointer;
-}
-
 /*Formulario Tarjeta*/
 .formulario-tarjeta {
     background: #fff;
     width: 100%;
     max-width: 700px;
-    padding: 150px 30px 30px 30px;
+    padding: 200px 30px 30px 30px;
     border-radius: 10px;
     position: relative;
     top: -150px;
