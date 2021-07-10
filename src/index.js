@@ -88,34 +88,33 @@ formulario.inputCCV.addEventListener('keyup', (e) => {
 	ccv.textContent = formulario.inputCCV.value;
 });
 
-formulario.addEventListener('submit', () =>{
-    alert('TarjetaInvalida');
-});
+        //funciones para validar y enmascarar tarjeta
 
 document.getElementById("btnFormulario").addEventListener("click", () => {
     let creditCardNumber = document.getElementById("inputNumero").value;
     tarjetaValida(creditCardNumber);
     mascaraNumero(creditCardNumber);
  
- })
+ });
 
     function tarjetaValida(creditCardNumber) {
         let valida = validator.isvalid(creditCardNumber) 
         if (valida === true) {
-                return true
+                return alert ("Hola, tu tarjeta: " + validator.maskify(creditCardNumber) + " es Valida");
          } else {
          return alert ("Hola, tu tarjeta es invalida" );
         }
-};
+}
 
     function mascaraNumero(creditCardNumber) {
-        document.getElementById("inputNumero").innerHTML = validator.maskify(creditCardNumber);
-        return alert ("Hola tu tarjeta: " + creditCardNumber + " es Valida");
+        document.getElementById("inputNumero").value = validator.maskify(creditCardNumber);
     
 };
 
+        // Mensaje Final a Usuario
+
+formulario.addEventListener('submit', () =>{
+    alert('Gracias por Preferirnos');
+});
 
 
-
-
-//5108743033091625

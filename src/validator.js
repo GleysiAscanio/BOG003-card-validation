@@ -1,4 +1,5 @@
 const validator = {
+    //creacion isvalid
   isvalid: (creditCardNumber) => {
     let numeros = (creditCardNumber.split("").reverse())
     let par = 0,
@@ -18,6 +19,7 @@ const validator = {
       let result = (par+impar);
       return result % 10 === 0 ? true : false;
   },
+    //creacion maskify
   maskify: (creditCardNumber) => {
     let mascarado = creditCardNumber.length;
     let final = "";
