@@ -1,3 +1,6 @@
+import validator from './validator.js';
+
+
 const tarjeta = document.querySelector("#tarjeta"), 
       formulario = document.querySelector("#formulario-tarjeta"),
       numeroTarjeta = document.querySelector("#tarjeta .numero"), 
@@ -5,7 +8,8 @@ const tarjeta = document.querySelector("#tarjeta"),
       firma = document.querySelector("#tarjeta .firma p"),
       mesExpiracion = document.querySelector("#tarjeta .mes"),
       yearExpiracion = document.querySelector("#tarjeta .year"),
-      ccv = document.querySelector("#tarjeta .ccv");
+      ccv = document.querySelector("#tarjeta .ccv"),
+      btnEnviar = document.querySelector("#btn-enviar .btnFormulario");
 
 //*Select del mes generado dinamicamente
 for(let i = 1; i <= 12; i++){
@@ -30,12 +34,11 @@ formulario.inputNumero.addEventListener("keyup", (e) => {
     let valorInput = e.target.value;
 
 	formulario.inputNumero.value = valorInput
+    .replace(/^\d{16,19} $ /)
 	//*Eliminamos espacios en blanco
 	.replace(/\s/g, '')
 	//*Eliminar las letras
 	.replace(/\D/g, '')
-	//*Ponemos espacio cada cuatro numeros
-	.replace(/([0-9]{4})/g, '$1 ')
 	//*Elimina el ultimo espaciado
 	.trim();
 
@@ -71,7 +74,7 @@ formulario.selectYear.addEventListener('change', (e) => {
 });
 
 //*CCV
-formulario.inputCCV.addEventListener('keyup', () => {
+formulario.inputCCV.addEventListener('keyup', (e) => {
 	if(!tarjeta.classList.contains('active')){
 		tarjeta.classList.toggle('active');
 	}
@@ -84,3 +87,35 @@ formulario.inputCCV.addEventListener('keyup', () => {
 
 	ccv.textContent = formulario.inputCCV.value;
 });
+
+formulario.addEventListener('submit', () =>{
+    alert('TarjetaInvalida');
+});
+
+document.getElementById("btnFormulario").addEventListener("click", () => {
+    let creditCardNumber = document.getElementById("inputNumero").value;
+    tarjetaValida(creditCardNumber);
+    mascaraNumero(creditCardNumber);
+ 
+ })
+
+    function tarjetaValida(creditCardNumber) {
+        let valida = validator.isvalid(creditCardNumber) 
+        if (valida === true) {
+                return true
+         } else {
+         return alert ("Hola, tu tarjeta es invalida" );
+        }
+};
+
+    function mascaraNumero(creditCardNumber) {
+        document.getElementById("inputNumero").innerHTML = validator.maskify(creditCardNumber);
+        return alert ("Hola tu tarjeta: " + creditCardNumber + " es Valida");
+    
+};
+
+
+
+
+
+//5108743033091625
