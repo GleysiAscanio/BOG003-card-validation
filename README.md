@@ -79,7 +79,7 @@ Para iniciar realizamos un protipo en papel:
 
 Prototipo final:
 
-![](https://github.com/GleysiAscanio/BOG003-card-validation/blob/master/imagenes/PROTOTIPOFINAL.PNG){width='100px'}
+![](<img src="imagenes/PROTOTIPOFINAL.jpeg"/>){width='100px'}
 
 
 
