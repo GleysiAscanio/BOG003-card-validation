@@ -75,11 +75,11 @@ Nuestro tematica escogida es sobre una agencia de viajes, en la cual creamos una
 
 Para iniciar realizamos un protipo en papel:
 
-<img src="imagenes/prototipopapel.jpeg"/>
+![](https://github.com/GleysiAscanio/BOG003-card-validation/blob/master/imagenes/Prototipopapel.jpeg){width='100px'}
 
 Prototipo final:
 
-<img src= "imagenes/PROTOTIPOFINAL.png"/>
+![](https://github.com/GleysiAscanio/BOG003-card-validation/blob/master/imagenes/PROTOTIPOFINAL.PNG){width='100px'}
 
 
 
