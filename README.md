@@ -29,7 +29,7 @@ Creamos una Tarjeta personalizada de la agencia en union con Mastercard, donde e
 
 Prototipo de Baja Fidelidad:
 
-![](https://github.com/GleysiAscanio/BOG003-card-validation/blob/master/imagenes/Prototipopapel.jpeg){width='100px'}
+![](https://github.com/GleysiAscanio/BOG003-card-validation/blob/master/imagenes/Prototipopapel.jpeg)
 
 prototipo de Alta Fidelidad:
 

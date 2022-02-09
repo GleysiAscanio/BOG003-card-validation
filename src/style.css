@@ -1,299 +1,52 @@
-header h1{
-    font-family: "Rock Salt", sans-serif;
-    font-size: 60px;
-    text-align: left;
-    position: absolute;
-    margin-left: 20px;
-    top: 50px
-}
-header img{
-    width: 100%;
-    height: 200px;
-    position: relative;
-    display: inline-block;
-}
-body{
-    margin: 0;
-    padding: 0;
-}
-p1{
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin: 70px;
-}
-
-p2{
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    justify-content: center;
-    margin: 150px;
-    padding: 5em;
+:root {
+  --dark-green: #142c29;
+  --dark-green-border: #162b28;
+  --just-white: #ffffff;
+  --strong-orange: #fd810f;
 }
 
 * {
-	margin: 0;
-	box-sizing: border-box;
+  margin: 0;
 }
 
-.contenedor {
-    width: 90%;
-    max-width: 1000px;
-    padding: 40px 20px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items:center
+.header_img_banner {
+  position: relative;
+  width: 100%;
+  z-index: 1;
 }
 
-/*-----Estilos generales de las tarjetas----*/
-.tarjeta {
-    width: 200%;
-    max-width: 1000px;
-    position: relative;
-    color: #fff;
-    transition: .3s ease all;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    z-index: 2;
-    background: none;
-    display: flex;
-    align-content: space-between;
-       
+.header_img_tittle {
+  position: absolute;
+  z-index: 2;
+  margin-top: 90px;
+  margin-left: 15px;
+  width: 230px;
 }
 
-
-.tarjeta > div {
-	padding: 30px;
-	border-radius: 15px;
-	min-height: 315px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	box-shadow: 0 10px 10px 0 rgba(90,116,148,0.3);
+.header_div_search {
+  background: var(--strong-orange);
+  padding: 2px 10px;
+  border-radius: 10px;
+  border: 2px solid var(--dark-green-border);
+  margin-left: 0px;
+  position: absolute;
+  z-index: 3;
+  margin-top: 160px;
+  margin-left: 25px;
 }
 
-        /*-----Tarjeta Delantera----*/
-
-.tarjeta .delantera {
-    width: 50%;
-    background-image: url(../imagenes/Fondo);
-    float: left;
-    background-size: cover;
-}
-
-.delantera .logo-marca {
-    text-align: right;
-    min-height: 50px;
-}
-
-.delantera .logo-marca img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: 80px;
-}
-
-.delantera .chip {
-    width: 100%;
-    max-width: 50px;
-    margin-bottom: 20px;
-}
-
-.delantera .grupo .label {
-    font-size: 16px;
-    color: #7d8994;
-    margin-bottom: 5px;
-}
-
-.delantera .grupo .numero
-.delantera .grupo .nombre
-.delantera .grupo .expiracion {
-    color: #fff;
-    font-size: 22px;
-    text-transform: uppercase;
-}
-
-.delantera .flexbox {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-            /*-----Tarjeta Trasera-----*/
-.trasera {
-    width: 50%;
-    background: url(../imagenes/trasera.PNG);
-    background-size: cover;
-	position: relative;
-    float: right;
-	backface-visibility: hidden;
-    
-}
-
-.trasera .barra-magnetica {
-    height: 40px;
-    background-color: darkgrey;
-    width: 100%;
-    position: absolute;
-    top: 30px;
-    left: 0;
-}
-
-.trasera .datos {
-    margin-top: 60px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.trasera .datos p {
-	margin-bottom: 5px;
-}
-
-.trasera .datos #firma {
-	width: 70%;
-}
-
-.trasera .datos #firma .firma {
-	height: 40px;
-	background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
-}
-
-.trasera .datos #firma .firma p {
-	line-height: 40px;
-	font-family: 'Liu Jian Mao Cao', cursive;
-	color: rgb(19, 18, 18);
-	font-size: 30px;
-	padding: 0 10px;
-	text-transform: capitalize;
-}
-
-.trasera .datos #ccv {
-    width: 20%;
-}
-
-.trasera .datos #ccv .ccv {
-    background-color: #fff;
-    height: 40px;
-    color: black;
-    padding: 10px;
-    text-align: center;
-}
-
-.trasera .leyenda {
-    font-size: 14px;
-    line-height: 24px;
-}
-
-.trasera .link-viajaja {
-    font-size: 14px;
-    color: #fff;
-}
-
-/*Formulario Tarjeta*/
-.formulario-tarjeta {
-    background: #fff;
-    width: 100%;
-    max-width: 700px;
-    padding: 200px 30px 30px 30px;
-    border-radius: 10px;
-    position: relative;
-    top: -150px;
-    z-index: 1;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path .3s ease-out;
-}
-
-.formulario-tarjeta.active {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.formulario-tarjeta label {
-    display: block;
-    color: #7d8994;
-    margin-bottom: 5px;
-    font-size: 16px;
-}
-
-.formulario-tarjeta input,
-.formulario-tarjeta select,
-.btn-enviar {
-    border: 2px solid #ced6e0;
-    font-size: 18px;
-    height: 50px;
-    width: 100%;
-    padding: 5px 12px;
-    transition: .3s ease all;
-    border-radius: 5px;
-}
-
-.formulario-tarjeta input:hover,
-.formulario-tarjeta select:hover {
-    border: 2px solid #938ded;
-}
-
-.formulario-tarjeta input:focus,
-.formulario-tarjeta select:focus {
-    outline: rgb(4,4,4);
-    box-shadow: 1px 7px -5px rgba(90,116,148,0.3);
-}
-
-.formulario-tarjeta input {
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.formulario-tarjeta .flexbox {
-    display: flex;
-    justify-content: space-between;
-}
-
-.formulario-tarjeta .expira {
-    width: 100%;
-}
-
-.formulario-tarjeta .ccv {
-	min-width: 100px;
-}
-
-.formulario-tarjeta .grupo-select {
-	width: 100%;
-	margin-right: 15px;
-    position: relative;
-}
-
-.formulario-tarjeta select {
-    -webkit-appearance: none;
-}
-
-.formulario-tarjeta .grupo-select i {
-    position: absolute;
-    color-adjust: #CED6E0;
-    top: 18px;
-    right: 15px;
-    transition: .3s ease all;
-}
-
-.formulario-tarjeta .btn-enviar {
-    border: none;
-    padding: 10px;
-    font-size: 22px;
-    color: #fff;
-    background: #2364d2;
-    box-shadow: 2px 2px 10px 0px rgba(0,85,212,0.4);
-    cursor: pointer;
-}
-
-.formulario-tarjeta .btn-enviar:hover {
-    background: #1850b1;
-}
-
-
-footer {
-    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    text-justify: center;
+.header_input_search {
+  background: transparent;
+  background-image: url("../img/magnifying_glass.svg");
+  background-repeat: no-repeat;
+  font-family: "Quintessential", "cursive";
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 28px;
+  background-size: 23px;
+  margin-top: 2px;
+  width: 300px;
+  height: 25px;
+  border: none;
+  outline: none;
 }
