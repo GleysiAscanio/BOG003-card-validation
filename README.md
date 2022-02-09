@@ -1,6 +1,6 @@
 # Magic Shop
 
-![Alt text] (./img/banner_hp.svg)
+![Alt text] (img/banner_hp.svg)
 
 #### Link a proyecto
 [Card Validation - TC23 - BOG003]()
