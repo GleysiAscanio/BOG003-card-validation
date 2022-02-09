@@ -1,4 +1,4 @@
-![Banner de la pagina] (img\banner_hp.svg)
+![Banner de la pagina](/img/banner_hp.svg)
 
 # Magic Shop
 
