@@ -1,12 +1,14 @@
 :root {
   --dark-green: #142c29;
   --dark-green-border: #162b28;
+  --blue-body: #075168;
   --just-white: #ffffff;
   --strong-orange: #fd810f;
 }
 
 * {
   margin: 0;
+  background-color: var(--blue-body);
 }
 
 .header_img_banner {
@@ -16,6 +18,7 @@
 }
 
 .header_img_tittle {
+  background-color: transparent;
   position: absolute;
   z-index: 2;
   margin-top: 90px;
@@ -49,4 +52,18 @@
   height: 25px;
   border: none;
   outline: none;
+}
+
+.main_container_imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 100px;
+}
+.main_img_products {
+  width: 250px;
+  height: 250px;
+  margin-left: 50px;
+  margin-bottom: 150px;
 }
