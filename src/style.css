@@ -61,9 +61,20 @@
   justify-content: space-around;
   margin: 100px;
 }
-.main_img_products {
+
+.main_div_images {
+  margin-bottom: 150px;
+}
+
+.main_div_images img {
   width: 250px;
   height: 250px;
   margin-left: 50px;
-  margin-bottom: 150px;
+}
+
+.main_div_images p {
+  font-family: "Quintessential", "cursive";
+  font-size: 20px;
+  color: var(--just-white);
+  margin-left: 50px;
 }
