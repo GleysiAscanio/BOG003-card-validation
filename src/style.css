@@ -62,19 +62,30 @@
   margin: 100px;
 }
 
-.main_div_images {
-  margin-bottom: 150px;
+.main_div_products {
+  margin-bottom: 70px;
 }
 
-.main_div_images img {
+.main_div_products img {
   width: 250px;
   height: 250px;
   margin-left: 50px;
 }
 
-.main_div_images p {
+.main_div_products p {
   font-family: "Quintessential", "cursive";
   font-size: 20px;
   color: var(--just-white);
   margin-left: 50px;
+}
+
+.main_div_products button {
+  font-family: "Quintessential", "cursive";
+  font-size: 24px;
+  color: var(--just-white);
+  margin: 20px 0px 0px 120px;
+  width: 130px;
+  height: 40px;
+  background-color: var(--strong-orange);
+  border-radius: 20px;
 }
