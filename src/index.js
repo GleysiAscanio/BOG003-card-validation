@@ -1,121 +1,121 @@
-import validator from './validator.js';
+import validator from "./validator.js";
 
+const formulario = document.querySelector("#formulario-tarjeta");
 
-const tarjeta = document.querySelector("#tarjeta"), 
-      formulario = document.querySelector("#formulario-tarjeta"),
-      numeroTarjeta = document.querySelector("#tarjeta .numero"), 
-      nombreTarjeta = document.querySelector("#tarjeta .nombre"),
-      firma = document.querySelector("#tarjeta .firma p"),
-      mesExpiracion = document.querySelector("#tarjeta .mes"),
-      yearExpiracion = document.querySelector("#tarjeta .year"),
-      ccv = document.querySelector("#tarjeta .ccv");
-
+// eslint-disable-next-line no-undef
+$(function () {
+  // eslint-disable-next-line no-undef
+  $('[data-toogle="tooltip"]').tooltip();
+});
 
 //*Select del mes generado dinamicamente
-for(let i = 1; i <= 12; i++) {
-    let opcion = document.createElement("option");
-    opcion.value = i;
-    opcion.innerText = i;
-    formulario.selectMes.appendChild(opcion); 
-}   
-
+for (let i = 1; i <= 12; i++) {
+  let opcion = document.createElement("option");
+  opcion.value = i;
+  opcion.innerText = i;
+  formulario.selectMes.appendChild(opcion);
+}
 
 //*Select del año generado dinamicamente
 const yearActual = new Date().getFullYear();
-for (let i = yearActual; i <= yearActual +8; i++) {
-    let opcion = document.createElement("option");
-    opcion.value = i;
-    opcion.innerText = i;
-    formulario.selectYear.appendChild(opcion); 
+for (let i = yearActual; i <= yearActual + 8; i++) {
+  let opcion = document.createElement("option");
+  opcion.value = i;
+  opcion.innerText = i;
+  formulario.selectYear.appendChild(opcion);
 }
 
 //*Input numero de tarjeta
 formulario.inputNumero.addEventListener("keyup", (e) => {
-    let valorInput = e.target.value;
+  let valorInput = e.target.value;
 
-	formulario.inputNumero.value = valorInput
+  formulario.inputNumero.value = valorInput
     .replace(/^\d{16,19} $ /)
-	//*Eliminamos espacios en blanco
-	.replace(/\s/g, '')
-	//*Eliminar las letras
-	.replace(/\D/g, '')
-	//*Elimina el ultimo espaciado
-	.trim();
-
-    numeroTarjeta.textContent = valorInput;
-
-    if(valorInput == ""){
-        numeroTarjeta.textContent = "#### #### #### ###"
-    }
+    //*Eliminamos espacios en blanco
+    .replace(/\s/g, "")
+    //*Eliminar las letras
+    .replace(/\D/g, "")
+    //*Elimina el ultimo espaciado
+    .trim();
 });
 
 //*Input Nombre de tarjeta
-formulario.inputNombre.addEventListener('keyup', (e) => {
-	let valorInput = e.target.value;
+formulario.inputNombre.addEventListener("keyup", (e) => {
+  let valorInput = e.target.value;
 
-	formulario.inputNombre.value = valorInput.replace(/[0-9]/g, '');
-	nombreTarjeta.textContent = valorInput;
-	firma.textContent = valorInput;
-
-	if(valorInput == ''){
-		nombreTarjeta.textContent = 'Daniel Torres';
-	}
-
+  formulario.inputNombre.value = valorInput.replace(/[0-9]/g, "");
 });
 
-//*Select mes
-formulario.selectMes.addEventListener('change', (e) => {
-	mesExpiracion.textContent = e.target.value;
+//*Input Email de tarjeta
+formulario.inputEmail.addEventListener("keyup", (e) => {
+  let valorInput = e.target.value;
+
+  formulario.inputEmail.value = valorInput;
 });
 
-//*Select año
-formulario.selectYear.addEventListener('change', (e) => {
-	yearExpiracion.textContent = e.target.value.slice(2);
+//*Input Usuario Platzi de tarjeta
+formulario.inputUserPlatzi.addEventListener("keyup", (e) => {
+  let valorInput = e.target.value;
+
+  formulario.inputUserPlatzi.value = valorInput;
 });
 
 //*CCV
-formulario.inputCCV.addEventListener('keyup', () => {
-	if(!tarjeta.classList.contains('active')){
-		tarjeta.classList.toggle('active');
-	}
-
-	formulario.inputCCV.value = formulario.inputCCV.value
-	// Eliminar los espacios
-	.replace(/\s/g, '')
-	// Eliminar las letras
-	.replace(/\D/g, '');
-
-	ccv.textContent = formulario.inputCCV.value;
+formulario.inputCCV.addEventListener("keyup", () => {
+  formulario.inputCCV.value = formulario.inputCCV.value
+    // Eliminar los espacios
+    .replace(/\s/g, "")
+    // Eliminar las letras
+    .replace(/\D/g, "");
 });
 
-        //funciones para validar y enmascarar tarjeta
+//funciones para validar información de la tarjeta
 
 document.getElementById("btnFormulario").addEventListener("click", () => {
-    const creditCardNumber = document.getElementById("inputNumero").value;
-    tarjetaValida(creditCardNumber);
-    mascaraNumero(creditCardNumber);
-    const mensaje = tarjetaValida(creditCardNumber);
-    if(mensaje) {
-        return alert ("Hola, tu tarjeta: " + validator.maskify(creditCardNumber) + " es Valida");
-    }else{
-        return alert ("Hola, tu tarjeta: " + validator.maskify(creditCardNumber) + " es Invalida");
-    }
- })
-
-    function tarjetaValida(creditCardNumber) {
-        const valida = validator.isValid(creditCardNumber)
-        if (valida === true) {  
-            return true
-         } else {
-         return false
-        }
-}
-
-    function mascaraNumero(creditCardNumber) {
-        document.getElementById("inputNumero").value = validator.maskify(creditCardNumber);
-}
-   /// Mensaje Final a Usuario
-
-    formulario.addEventListener('submit', () =>{
-    alert('Gracias por Preferirnos');
+  const creditCardNumber = document.getElementById("inputNumero").value;
+  tarjetaValida(creditCardNumber);
+  mascaraNumero(creditCardNumber);
+  const mensaje = tarjetaValida(creditCardNumber);
+  const confirmacion = document.getElementById("mensaje-confirmacion");
+  const negacion = document.getElementById("mensaje-negacion");
+  if (mensaje) {
+    let exito = document.createElement("h6");
+    exito.innerText =
+      "Hola, tu tarjeta: " + validator.maskify(creditCardNumber) + " es Válida";
+    confirmacion.style.display = "block";
+    confirmacion.appendChild(exito);
+    setTimeout(() => {
+      confirmacion.style.display = "none";
+      // eslint-disable-next-line no-undef
+      $("#modalCompra").modal("hide");
+      // eslint-disable-next-line no-undef
+      $("body").removeClass("modal-open");
+      // eslint-disable-next-line no-undef
+      $(".modal-backdrop").remove();
+    }, 5000);
+  } else {
+    let exito = document.createElement("h6");
+    exito.innerText =
+      "Hola, tu tarjeta: " +
+      validator.maskify(creditCardNumber) +
+      " es Inválida";
+    negacion.style.display = "block";
+    negacion.appendChild(exito);
+    setTimeout(() => {
+      negacion.style.display = "none";
+    }, 5000);
+  }
 });
+const tarjetaValida = (creditCardNumber) => {
+  const valida = validator.isValid(creditCardNumber);
+  if (valida === true) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const mascaraNumero = (creditCardNumber) => {
+  document.getElementById("inputNumero").value =
+    validator.maskify(creditCardNumber);
+};

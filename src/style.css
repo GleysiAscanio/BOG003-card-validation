@@ -1,91 +1,70 @@
-:root {
-  --dark-green: #142c29;
-  --dark-green-border: #162b28;
-  --blue-body: #075168;
-  --just-white: #ffffff;
-  --strong-orange: #fd810f;
+/*header*/
+.text-platzi {
+  color: #97c93e !important;
 }
 
-* {
-  margin: 0;
-  background-color: var(--blue-body);
+#header img {
+  width: 80px;
+}
+/*header*/
+/*main*/
+#main .carousel-inner img {
+  max-height: 70vh;
+  object-fit: cover;
+  filter: grayscale(70%);
 }
 
-.header_img_banner {
+#carousel {
   position: relative;
-  width: 100%;
-  z-index: 1;
 }
-
-.header_img_tittle {
-  background-color: transparent;
+#carousel .overlay {
   position: absolute;
-  z-index: 2;
-  margin-top: 90px;
-  margin-left: 15px;
-  width: 230px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+#carousel .overlay .container,
+#carousel .overlay .row {
+  height: 100%;
+}
+.btn-platzi {
+  background-color: #97c93e;
+  color: white !important;
 }
 
-.header_div_search {
-  background: var(--strong-orange);
-  padding: 2px 10px;
-  border-radius: 10px;
-  border: 2px solid var(--dark-green-border);
-  margin-left: 0px;
-  position: absolute;
-  z-index: 3;
-  margin-top: 160px;
-  margin-left: 25px;
+.btn-platzi:hover {
+  background-color: #82ad36;
 }
 
-.header_input_search {
-  background: transparent;
-  background-image: url("../img/magnifying_glass.svg");
-  background-repeat: no-repeat;
-  font-family: "Quintessential", "cursive";
-  font-size: 20px;
-  font-weight: bold;
-  padding-left: 28px;
-  background-size: 23px;
-  margin-top: 2px;
-  width: 300px;
-  height: 25px;
-  border: none;
-  outline: none;
+.badges {
+  text-align: end;
+}
+/*main*/
+
+/*Modal*/
+#year {
+  margin-top: 2rem !important;
 }
 
-.main_container_imgs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 100px;
+#mensaje-confirmacion {
+  display: none;
 }
 
-.main_div_products {
-  margin-bottom: 70px;
+#mensaje-negacion {
+  display: none;
 }
 
-.main_div_products img {
-  width: 250px;
-  height: 250px;
-  margin-left: 50px;
+/*Modal*/
+
+/*Footer*/
+#footer {
+  background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5472);
 }
 
-.main_div_products p {
-  font-family: "Quintessential", "cursive";
-  font-size: 20px;
-  color: var(--just-white);
-  margin-left: 50px;
+#footer a {
+  color: white;
 }
-
-.main_div_products button {
-  font-family: "Quintessential", "cursive";
-  font-size: 24px;
-  color: var(--just-white);
-  margin: 20px 0px 0px 120px;
-  width: 130px;
-  height: 40px;
-  background-color: var(--strong-orange);
-  border-radius: 20px;
-}
+/*Footer*/

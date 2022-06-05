@@ -1,155 +1,396 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Card Validation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="style.css" />
+    <title>PlatziConf Hawaii</title>
   </head>
-  <body>
-    <header>
-      <div class="header_div_search">
-        <input type="search" placeholder="Buscar Producto" class="header_input_search"></input>
+  <body data-spy="scroll" data-target="#navbar" data-offset="57">
+    <!--Header-->
+    <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/platzi-logo.png" alt="platzi-logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar"
+          aria-controls="navbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="#main">La conferencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#speakers">Los oradores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#place-time">El lugar y la fecha</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#conviertete-en-orador">conviértete en orador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-platzi" data-toggle="modal" href="#modalCompra">Comprar tickets</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <img src="../img/tittleMagicShop.svg" class="header_img_tittle" alt="tittle_magic_shop">
-      <img src="../img/banner_hp.svg" class="header_img_banner" alt="banner_harry_potter">
-    </header>
-    
-    <main class="main_container_imgs">
-      <div class="main_div_products">
-        <img src="/img/globohp.svg" alt="globo_cristal" class="main_img_products"> 
-        <p>Globo Cristal Harry Potter <br> $55.000</p>   
-        <button type="button" class="main_button_purchase">Comprar</button>    
-      </div>
-      <div class="main_div_products">
-        <img src="/img/mug_hp.svg" alt="mug_harry" class="main_img_products">
-        <p>Mug Harry Potter<br> $25.000</p>
-        <button type="button" class="main_button_purchase">Comprar</button>    
-      </div>
-      <div class="main_div_products">
-        <img src="/img/termo_hp.svg" alt="termo_harry" class="main_img_products">
-        <p>Termo Harry Potter<br> $38.000</p>
-        <button type="button" class="main_button_purchase">Comprar</button>    
-      </div>
-      <div class="main_div_products">
-        <img src="/img/pin_hp.svg" alt="pin_harry">
-        <p>Pin Harry Potter<br> $13.000</p>
-        <button type="button" class="main_button_purchase">Comprar</button>    
-      </div>
-      <div class="main_div_products">
-        <img src="/img/llavero_hp.svg" alt="llavero_harry">
-        <p>Llavero  Harry Potter<br> $15.000</p>
-        <button type="button" class="main_button_purchase">Comprar</button>    
-      </div>
-      <div class="main_div_products">
-        <img src="/img/carterahp.svg" alt="cartera_harry">
-        <p>Cartera  Harry Potter<br> $35.000</p>
-        <button type="button" class="main_button_purchase">Comprar</button>    
-      </div>
-      <div class="main_div_products">
-        <img src="/img/saleroshp.svg" alt="salero_pimienta_harry">
-        <p>Set Salero y Pimentero H. P.<br> $65.000</p>
-        <button type="button" class="main_button_purchase">Comprar</button>    
-      </div>
-      <div class="main_div_products">
-        <img src="/img/agendahp.svg" alt="agenda_harry">
-        <p>Agenda Harry Potter<br>$75.000</p>
-        <button type="button" class="main_button_purchase">Comprar</button>    
-      </div>
-      <div class="main_div_products">
-        <img src="/img/calendario_hp.svg" alt="calendario_harry">
-        <p>Calendario Harry Potter<br> $95.000</p>
-        <button type="button" class="main_button_purchase">Comprar</button>    
+    </nav>
+    <!--/Header-->
+
+    <!--Main-->
+    <main id="main">
+      <div
+        id="carousel"
+        class="carousel slide"
+        data-ride="carousel"
+        data-pause="false"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/hawaii.jpg" class="d-block w-100" alt="hawaii1" />
+          </div>
+          <div class="carousel-item">
+            <img src="assets/hawaii2.jpg" class="d-block w-100" alt="hawaii2" />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="assets/hawaii3.jpeg"
+              class="d-block w-100"
+              alt="hawaii3"
+            />
+          </div>
+          <div class="overlay">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-md-6 offset-md-6 text-center text-md-right">
+                  <h1>Platzi Conf Hawaii</h1>
+                  <p class="d-none d-md-block">
+                    Platzi Conf llega por primera vez a Hawaii! Un evento para
+                    compartir con nuestra comunidad el conocimiento y
+                    experiencia de los expertos que están creando el futuro de
+                    internet. Ven a conocer a miembros del Team Platzi, a otros
+                    estudiantes y a los oradores de primer nivel que tenemos
+                    para ti. Te esperamos!
+                  </p>
+                  <a href="#conviertete-en-orador" class="btn btn-outline-light"
+                    >Quiero ser orador</a
+                  >
+                  <button type="button" data-toggle="modal" href="#modalCompra" class="btn btn-platzi">
+                    Comprar tickets
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
+    <!--/Main-->
 
-      <div class="contenedor">
-                           <!--Tarjeta parte delantera-->
-            <section class="tarjeta" id="tarjeta">
-                <div class="delantera">
-                    <div class="logo-marca" id="logoMarca">
-                        <img src="../imagenes/mastercard.png" alt=""/> 
-                    </div>
-                    <img src="../imagenes/chip-tarjeta.png" class="chip" alt=""/>
-                    <div class="datos">
-                    <div class="grupo" id="numero">
-                    <p class="label">Número Tarjeta</p>
-                    <p class="numero">#### #### #### ###</p>
-                    </div>
-                    <div class="flexbox">
-                    <div class="grupo" id="nombre">
-                        <p class="label">Nombre Tarjeta</p>
-                        <p class="nombre">DANIEL TORRES</p>
-                    </div>
-  
-                    <div class="grupo" id="expiracion">
-                        <p class="label">Expiración</p>
-                        <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
-                    </div>
-                     </div>
-                  </div>
-               </div>
-                            <!--Tarjeta parte trasera--> 
-                    <div class="trasera">
-                        <div class="barra-magnetica"></div>
-                           <div class="datos">
-                              <div class="grupo" id="firma">
-                                <p class="label">Firma</p>
-                                 <div class="firma"><p></p></div>
-                              </div>
-                                    <div class="grupo" id="ccv">
-                                    <p class="label">CCV</p>
-                                    <p class="ccv"></p>
-                                    </div>
-                            </div>
-                              <p class="leyenda">This card is not valid. Is a prototype created by the duo 23 of
-                               BO003, credit card project. No one is licensed, use is free. We don't have 
-                               customer service but if you want more information, please visit our project at: 
-                              </p>
-                              <a href="#" class="link-viajaja">https://github.com/Laboratoria?q=BOG003&type=&language=&sort=.</a>
-                     </div>    
-            </section>
-
-            
-        <!--Formulario-->
-        <form action="" id="formulario-tarjeta" class="formulario-tarjeta active">
-                        <div class="grupo">
-                <label for="input-numero">Número Tarjeta</label>
-                <input type="text" id="inputNumero" maxlength="16" autocomplete="off" required>
-                        </div>
-                        <div class="grupo">
-                <label for="input-nombre">Nombre</label>
-                <input type="text" id="inputNombre" maxlength="19" autocomplete="off" required>
-                        </div>
-                        <div class="flexbox">
-                        <div class="grupo expira">
-                <label for="selectMes">Expiracion</label>
-                        <div class="flexbox">
-                        <div class="grupo-select">
-                            <select name="mes" id="selectMes">
-                               <option disabled selected>Mes</option>
-                            </select>
-                            <i class="fas fa-angle-down"></i>
-                        </div>
-                        <div class="grupo-select">
-                             <select name="year" id="selectYear">
-                                <option disabled selected>Año</option>
-                             </select>
-                             <i class="fas fa-angle-down"></i>
-                        </div>
-                        </div>
-                        </div>
-                        <div class="grupo ccv">
-                             <label for="inputCCV">CCV</label>
-                             <input type="text" id="inputCCV" maxlength="3">
-                        </div>
-                        </div>
-                        <button type="submit" class="btn-enviar" id="btnFormulario">Enviar</button>
-        </form>
-    
+    <!--Speakers-->
+    <section id="speakers" class="mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center text-uppercase">
+            <small>Conoce a los</small>
+            <h2>Oradores</h2>
           </div>
-        
-    <footer>Nuestra herramienta tiene un verificador de Algoritmo de Luhn</footer>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                src="speakers/leonidas2.jpeg"
+                class="card-img-top"
+                alt="Leonidas Esteban"
+              />
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge badge-primary">React</span>
+                  <span class="badge badge-dark">MySQL</span>
+                </div>
+                <h5 class="card-title">Leonidas Esteban</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ducimus vero, nesciunt possimus saepe deleniti sunt quia
+                  ratione nihil dicta pariatur!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                src="speakers/cvander.jpeg"
+                class="card-img-top"
+                alt="Christian Van Der H."
+              />
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge badge-success">Vue.js</span>
+                  <span class="badge badge-danger">Front End</span>
+                </div>
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Quidem minus nisi nulla vitae, voluptatum commodi. Perferendis
+                  pariatur cupiditate aspernatur rem?
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img src="speakers/sacha.jpg" class="card-img-top" alt="sacha" />
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge badge-warning">JavaScript</span>
+                  <span class="badge badge-info">React</span>
+                </div>
+                <h5 class="card-title">Sacha Lifszyc</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Tenetur amet consequuntur accusantium laboriosam id repellat
+                  dolorem officiis dignissimos enim laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card">
+              <img
+                src="speakers/freddy.jpeg"
+                class="card-img-top"
+                alt="Freddy Vega"
+              />
+              <div class="card-body">
+                <div class="badges mb-2">
+                  <span class="badge badge-secondary">StartUp</span>
+                  <span class="badge badge-warning">JavaScript</span>
+                </div>
+                <h5 class="card-title">Freddy Vega</h5>
+                <p class="card-text">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Adipisci, doloribus! Sequi consectetur nobis cum sunt,
+                  repellat laudantium a quis recusandae!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/Speekers-->
+
+    <!--Lugar y Fecha-->
+    <section id="place-time">
+  <div class="container-fluid bg-dark text-light">
+    <div class="row">
+      <div class="col-12 col-lg-6 px-0 ">
+      <img class="img-fluid" src="assets/honolulu.jpg" alt="honolulu">
+      </div>
+      <div class="col-12 col-lg-6 py-4">
+      <h2>Honolulu - Octubre 2025</h2>
+      <p>Honolulu es la capital y localidad más grande del estado de Hawái,
+        en los Estados Unidos. Honolulu es la más sureña de entre las
+          principales ciudades estadounidenses. Aunque el nombre de Honolulu 
+          se refiere al área urbana en la costa sureste de la isla de Oahu,
+        la ciudad y el condado de Honolulu han formado una ciudad-condado 
+        consolidada que cubre toda la isla (aproximadamente 600 km² de superficie).</p>
+      <a class="btn btn-outline-light" href="https://es.wikipedia.org/wiki/Honolulu">Conoce más</a>
+      </div>
+    </div>
+  </div>
+</div>
+    </section>
+    <!--/Lugar y Fecha-->
+
+    <!--Conviértete en Orador-->
+    <section id="conviertete-en-orador" class="py-2">
+      <div class="container">
+        <div class="row">
+          <div class="col text-uppercase text-center">
+            <small>conviértete en un</small>
+            <h2>Orador</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center">
+            Anótate como orador para dar una 
+            <abbr data-toggle="tooltip" title="Charlas de 5min">charla ignite.</abbr> 
+            Cuéntanos de qué quieres hablar!
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-md-10 offset-md-1 col-lg-8 offset-lg-2 py-3">
+            <form>
+              <div class="form-row">
+                <div class="form-group col-12 col-md-6">
+                  <input type="text" class="form-control" placeholder="Nombre">
+                </div>
+                <div class="form-group col-12 col-md-6">
+                  <input type="text" class="form-control" placeholder="Apellido">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col">
+                  <textarea name="text" class="form-control form-control-lg" placeholder="¿Sobre qué quieres hablar?"></textarea>
+                  <small class="form-text text-muted">Recuerda incluir un título para tu charla.</small>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <button type="button" class="btn btn-platzi btn-block">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/Conviértete en Orador-->
+
+    <!--Footer-->
+    <footer id="footer" class="pb-4 pt-4">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-12 col-lg">
+            <a href="#">Preguntas frecuentes</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Contáctanos</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Prensa</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Términos y condiciones</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Privacidad</a>
+          </div>
+          <div class="col-12 col-lg">
+            <a href="#">Estudiantes</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--/Footer-->
+
+    <!-- Modal -->
+<div class="modal fade" id="modalCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Comprar tickets</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="formulario-tarjeta" >
+          <div class="form-row">
+            <div class="form-group col-6">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
+              </div>
+            </div>
+            <div class="form-group col-6">
+              <label for="exampleInputEmail1">Usuario Platzi</label>
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="text" class="form-control" id="inputUserPlatzi" aria-label="Username" aria-describedby="basic-addon1">
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label for="exampleInputEmail1">Número de tarjeta</label>
+              <input type="text" class="form-control" id="inputNumero" maxlength="16" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group col-6">
+              <label for="exampleInputEmail1">Nombre</label>
+              <input type="text" class="form-control" id="inputNombre" maxlength="19" aria-describedby="emailHelp">
+            </div>
+          </div>
+          <div class="form-row">
+              <div class="form-group col-3">
+                <label for="exampleInputEmail1">Expiración</label>
+                <select class="form-control" id="selectMes">
+                  <option disabled selected>Mes</option>
+                </select>
+                </div>
+                <div class="form-group col-3" id="year">
+                  <select class="form-control" id="selectYear">
+                  <option disabled selected>Año</option>
+                </select>
+                </div>
+                <div class="form-group col-3 offset-3">
+                  <label for="exampleInputEmail1">CVV</label>
+                  <input type="text" class="form-control" id="inputCCV" maxlength="3" aria-describedby="emailHelp">
+                </div>    
+          </div>
+          <div class="form-row">
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Acepta términos y condiciones</label>
+            </div>
+          </div>
+        </form>
+        <div class="alert alert-success" role="alert" id="mensaje-confirmacion"></div>
+        <div class="alert alert-danger" role="alert" id="mensaje-negacion"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-platzi" id="btnFormulario">Comprar</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <!--/Modal -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
     <script src="index.js" type="module"></script>
   </body>
 </html>

@@ -1,6 +1,6 @@
-![Banner de la pagina](/img/banner_hp.svg)
+![Banner de la pagina](/src/assets/hawaii.jpg)
 
-# Magic Shop
+# Platzi Conf
 
 #### Link a proyecto
 
@@ -8,23 +8,22 @@
 
 ## Resumen del proyecto
 
-En este proyecto construimos una aplicación web de una tienda de artículos de Harry Potter, con la finalidad de ofrecer comodidad a los futuros clientes de poder realizar compras de forma online. Para ello, el usuario tiene a su disposición todos los productos disponibles en inventario, además podrá realizar búsquedas por el nombre de los artículos en los que este interesado en adquirir. Y la carácteristica más importante es que agregamos un validador de tarjetas de crédito, el usuario al realizar su compra, podrá cancelar con una tarjeta de forma segura ya que los dígitos de su tarjeta son protegidos, ocultando los últimos 4 digitos y se verifica si posee una tarjeta de crédito válida.
+En este proyecto construimos una aplicación web para un evento de tecnología llamado Platzi Conf, con la finalidad de dar a conocer toda la información referente al evento y que los usuarios puedan comprar sus entradas forma online. Para ello, el usuario tiene a su disposición la información de todos los oradores y las conferencias a realizar, así como el lugar, la fecha y la opción de participar como orador, además podrá realizar compra de los tickets para poder acceder a la conferencia. Y la carácteristica más importante es que agregamos un validador de tarjetas de crédito, el usuario al realizar su compra, podrá cancelar con una tarjeta de forma segura ya que los dígitos de su tarjeta son protegidos, ocultando todos dígitos, excepto los últimos 4 y se verifica si posee una tarjeta de crédito válida.
 
 ## 2. Objetivos de aprendizaje
 
-Trabajando en parejas aprenderán a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
+Aprendimos a construir una aplicación web que interactuará
+con lx usuarix final a través del navegador, utilizando HTML, CSS, JavaScript y Bootstrap
 como tecnologías.
 
-## 3. Nuestro Proyecto
+## 3. Resultado Final
 
-Hemos Creado la sección de una página Web de una agencia de viajes, que va dirigida a sus Viajeros Frecuentes, que poseen una tarjeta de crédito VIP la cual deberan validar para realizar una reserva el viaje de su preferencia.
-Creamos una Tarjeta personalizada de la agencia en union con Mastercard, donde el usuario llena los campos, se valida su tarjeta y de ser una tarjeta valida el usuario podra realizar la reserva de viaje.
+![](/finale/resultado.JPG)
 
-Prototipo de Baja Fidelidad:
+![](/finale/resultado2.JPG)
 
-![](https://github.com/GleysiAscanio/BOG003-card-validation/blob/master/imagenes/Prototipopapel.jpeg)
+![](/finale/resultado3.JPG)
 
-prototipo de Alta Fidelidad:
+![](/finale/resultado4.JPG)
 
-![](https://github.com/GleysiAscanio/BOG003-card-validation/blob/master/imagenes/PROTOTIPOFINAL.jpeg)
+## 4. Link de el Proyecto
