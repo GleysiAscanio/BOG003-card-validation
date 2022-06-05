@@ -4,7 +4,7 @@
 
 #### Link a proyecto
 
-[]()
+[](https://gleysiascanio.github.io/BOG003-card-validation/src/)
 
 ## Resumen del proyecto
 
@@ -25,5 +25,3 @@ como tecnologías.
 ![](/finale/resultado3.JPG)
 
 ![](/finale/resultado4.JPG)
-
-## 4. Link de el Proyecto
