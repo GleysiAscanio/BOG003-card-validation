@@ -4,7 +4,7 @@
 
 #### Link a proyecto
 
-[](https://gleysiascanio.github.io/BOG003-card-validation/src/)
+[PlatziConf](https://gleysiascanio.github.io/BOG003-card-validation/src/)
 
 ## Resumen del proyecto
 
